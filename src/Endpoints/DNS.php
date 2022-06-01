@@ -158,6 +158,6 @@ class DNS implements API
     {
         $response = $this->adapter->post('zones/' . $zoneID . '/dns_records/scan');
         $this->body = json_decode($response->getBody());
-        return $this->body;
+        return $this->body->result;
     }
 }
